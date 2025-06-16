@@ -18,5 +18,28 @@
       "defaultValue": 1,
       "description": "The proportion of cells to downsample (default is 1, no downsampling)."
     }
-  ]
+  ],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+        "kind": "CrosstabSpec",
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Document ID",
+            "type": "",
+            "description": "Document ID of the ZIP file containing Cell Ranger output files.",
+            "ontologyMapping": "documentId",
+            "crosstabMapping": "column",
+            "cardinality": "1..n",
+            "factors": []
+          }
+        ],
+        "axis": []
+      }
+    ]
+  }
 }
